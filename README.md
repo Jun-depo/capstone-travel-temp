@@ -1,8 +1,5 @@
 
-# Building Data Pipeline With Spark and Airflow to Study The Relationship Between Temperature and Traveling into US Ports.
-
-## Data Engineering Capstone Project
-
+# Building Data Pipeline With Spark and Airflow to Study The Relationship Between Temperature and Traveling.
 
 ## Project Summary:
 
