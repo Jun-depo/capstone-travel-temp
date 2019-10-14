@@ -18,7 +18,7 @@ base_dir = os.getcwd() + '/src/'
 dag = DAG(
     'immgration_entry1_dag',
     start_date=datetime(2016, 1, 1, 0, 0, 0, 0),
-    end_date=datetime(2016, 1, 1, 0, 0, 0, 0),
+    end_date=datetime(2016, 12, 1, 0, 0, 0, 0),
     schedule_interval='@monthly',
     max_active_runs=1
 )
