@@ -11,7 +11,7 @@ I94 immigration data from US government contain travel entry data into United St
 
 The data pipelie produce finally aggregated data into a set of analytic tables that can be used for studying the relationship between international traveling and city temperatures in USA. The data was used for plotting to visualization of the relationship between temperature and traveling counts in top 20 cities in USA. The picture below shows plots for 9 cities.  
 
-<img src="temp_travel_polts.png" style="width:900px;height:620px;">
+<img src="src/temp_travel_polts.png" style="width:900px;height:620px;">
 
 
 In most cities except warm weather cities, traveling increases almost in linear fashion with the increase of the temperature.  Warm weather cities are exceptions. Since the weather was never really cold in warm cities, traveling becomes also less prohibitive in these cities, resulting less traveling reduction in winter season. 
@@ -122,9 +122,9 @@ The following python scripts was used to build the data pipeline to create the d
 
 The graphs illustrate the DAG run of the pipeline below. 
 
-<img src="dag_run3.png" style="width:1000px;height:300px;">
+<img src="src/dag_run3.png" style="width:1000px;height:300px;">
 
-<img src="dag_run3b.png" style="width:600px;height:300px;">
+<img src="src/dag_run3b.png" style="width:600px;height:300px;">
 
 #### Directory/folder structures
 Sometime correct directory locations are important for running scripts.  I provide the information here, in case they are useful for contructing DAG runs. 
@@ -135,14 +135,14 @@ Sometime correct directory locations are important for running scripts.  I provi
 * analytical tables locates at (/home/jun3/src/temperature_entry_anal)
 * Below I show some of the items insider /home/jun3/src/data/ since data folder will not be included in the submission. 
 
-<img src="data_folder.png" style="width:240px;height:300px;">
+<img src="src/data_folder.png" style="width:240px;height:300px;">
 
 
 
 #### 4.2 Data Quality Checks
 * **data_check_csv.py** (/home/jun3/airflow/plugins/operators/data_check_csv.py) and **data_check_spark.py** (/home/jun3/airflow/plugins/operators/data_check_spark.py) were used to count numbers of rows in each table. All tables contain good number of data as illustrated below.   
 
-<img src="dag_run3_pq_ck.png" style="width:800px;height:160px;">
+<img src="src/dag_run3_pq_ck.png" style="width:800px;height:160px;">
 
 * I use pyarrow.parquet to read parquet files and count rows. I couldn't run spark there,  due to running another Spark session inside the data_check operator interferes with running of the DAG pipeline.  pyarrow.parquet runs slower than Spark.  
 
